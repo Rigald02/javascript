@@ -1,0 +1,7 @@
+body {
+	font-family:Arial;
+}
+#timer {
+	text-decoration: underline;
+	font-weight: bold;
+}
