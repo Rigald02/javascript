@@ -1,5 +1,9 @@
 var startTime;
 var timer;
+
+var difficulty = "beginner";
+var tableau = [];
+
 function chrono() {
 	var currentTime = Date.now();
 	var diff = (currentTime - startTime)/1000;
@@ -15,9 +19,55 @@ function startChrono() {
 	clearInterval(timer);
 	timer = setInterval("chrono()", 50);
 }
+
+function diffcultySetup(){
+	difficulty = document.getElementById("difficulty").value;
+	//console.log(difficulty);
+	switch (difficulty){
+		case "beginner":
+			setupBoard(9);
+			break;
+		case "medium":
+			setupBoard(16);
+			break;
+		case "expert":
+			setupBoard(22);
+			break;
+		case "master":
+			setupBoard(30);
+			break;
+	}
+}
+
+function setupBoard(size){
+	for (var i = 0; i < size; i++){
+
+		var colonne = [];
+
+		for (var j = 0; j < size; j++){
+			colonne.push("X");
+		}
+
+		tableau.push(colonne);
+	}
+}
+
+function displayBoardInConsole(){
+
+	for (var i = 0; i < tableau.length; i++){
+
+		for (var j = 0; j < tableau[i].length; j++){
+			console.log("X");
+		}
+
+		console.log("\n");
+	}
+}
+
 function start() {
 	startChrono();
-	
+	diffcultySetup();
+	// displayBoardInConsole();
 }
 
 function  drapeau(toggle){
