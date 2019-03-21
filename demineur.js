@@ -58,18 +58,6 @@ function setupBoard(size){
 }
 
 
-function displayBoardOnConsole(){
-
-	for (var i = 0; i < tableau.length; i++){
-
-		for (var j = 0; j < tableau[i].length; j++){
-			console.log("X");
-		}
-
-		console.log("\n");
-	}
-}
-
 
 function displayBoardOnPage(){
 
@@ -97,7 +85,7 @@ function start() {
 	startChrono();
 	tableau = [];
 	diffcultySetup();
-	displayBoardOnConsole();
+	// displayBoardOnConsole();
 	displayBoardOnPage();
 }
 
@@ -115,3 +103,15 @@ function  drapeau(i, j, toggle){
 	}
 }
 */
+
+/*function displayBoardOnConsole(){
+
+	for (var i = 0; i < tableau.length; i++){
+
+		for (var j = 0; j < tableau[i].length; j++){
+			console.log("X");
+		}
+
+		console.log("\n");
+	}
+}*/
