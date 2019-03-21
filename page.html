@@ -6,22 +6,18 @@
     <title></title>
   </head>
   <body>
-
-  	<h1><center>Démineur</center></h1>
-
-  	<center>
+  	<center id="boxCenter">
+  	<h1>Démineur</h1>
       <select name="difficulty" id="difficulty">
 
-        <option value="beginner">Débutant</option>
-        <option value="medium">Intermédiaire</option>
-        <option value="expert">Expert</option>
-        <option value="master">Maître</option>
+        <option value="beginner">Débutant : 9x9 cases, 10 bombes</option>
+        <option value="medium">Intermédiaire : 16x16 cases, 40 bombes</option>
+        <option value="expert">Expert : 22x22 cases, 100 bombes</option>
+        <option value="master">Maître : 30x30 cases, 250 bombes</option>
 
       </select>
 
-      <input type="submit" id="" value="Lancer la partie" onclick="startChrono()" />
-
-      <input type="reset" id="" value="Remise à 0" />
+      <input type="submit" id="" value="Nouvelle partie" onclick="startChrono()" />
 
       <span id="timer">Temps :  00:00</span>
     </center>

@@ -1,4 +1,5 @@
-var startTime = Date.now();
+var startTime;
+var timer;
 function chrono() {
 	var currentTime = Date.now();
 	var diff = (currentTime - startTime)/1000;
@@ -8,9 +9,9 @@ function chrono() {
 	var preMin = (min < 10) ? "0" : "";
 	var preSec = (sec < 10) ? "0" : "";
 	document.getElementById("timer").innerHTML = "Temps :  " + preMin + min + ":" + preSec + sec;
-	setTimeout("chrono()", 50);
 }
 function startChrono() {
 	startTime = Date.now();
-	chrono();
+	clearInterval(timer);
+	timer = setInterval("chrono()", 50);
 }
