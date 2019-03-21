@@ -10,7 +10,7 @@ var totalBombs;
 // https://www.w3schools.com/js/js_htmldom_methods.asp
 // https://www.w3schools.com/jsref/default.asp
 // https://www.w3schools.com/jsref/met_document_addeventlistener.asp
-https://www.w3schools.com/js/js_htmldom_eventlistener.asp
+// https://www.w3schools.com/js/js_htmldom_eventlistener.asp
 
 
 function randomNumber(maxNumber)
