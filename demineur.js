@@ -80,6 +80,10 @@ function displayBoardOnPage(){
 	}
 }
 
+function bombe(){
+
+}
+
 
 function start() {
 	startChrono();
