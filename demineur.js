@@ -52,7 +52,7 @@ function setupBoard(size){
 	}
 }
 
-function displayBoardInConsole(){
+function displayBoardOnConsole(){
 
 	for (var i = 0; i < tableau.length; i++){
 
@@ -64,10 +64,23 @@ function displayBoardInConsole(){
 	}
 }
 
+function displayBoardOnPage(){
+	for (var i = 0; i < tableau.length; i++){
+
+		for (var j = 0; j < tableau[i].length; j++){
+
+			var boardDisplay = document.getElementById("tableauDemineur");
+
+		}
+	}
+}
+
 function start() {
 	startChrono();
+	tableau = [];
 	diffcultySetup();
-	// displayBoardInConsole();
+	displayBoardOnConsole();
+	displayBoardOnPage();
 }
 
 function  drapeau(i, j, toggle){
