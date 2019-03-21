@@ -19,3 +19,14 @@ function start() {
 	startChrono();
 	
 }
+
+function  drapeau(toggle){
+	var Case = document.getElementsById('images/normal.png');
+	var Flag = document.getElementsById('images/flag.png');
+	if(toggle == 1){
+		$(Case).parentElement.appendChild(Flag)
+	}
+	else{
+		$(Case).remove()		
+	}
+}
