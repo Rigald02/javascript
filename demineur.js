@@ -15,3 +15,7 @@ function startChrono() {
 	clearInterval(timer);
 	timer = setInterval("chrono()", 50);
 }
+function start() {
+	startChrono();
+	
+}
