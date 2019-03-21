@@ -77,6 +77,6 @@ function  drapeau(toggle){
 		$(Case).parentElement.appendChild(Flag)
 	}
 	else{
-		$(Case).remove()		
+		$(Case).remove(Flag)		
 	}
 }
