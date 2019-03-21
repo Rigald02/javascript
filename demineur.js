@@ -70,13 +70,16 @@ function start() {
 	// displayBoardInConsole();
 }
 
-function  drapeau(toggle){
-	var Case = document.getElementsById('images/normal.png');
+function  drapeau(i, j, toggle){
 	var Flag = document.getElementsById('images/flag.png');
 	if(toggle == 1){
-		$(Case).parentElement.appendChild(Flag)
+		//$(Case).parentElement.appendChild(Flag)
+		document.getElementsById('colonne').children[j].children[i].children[0].classList.add(Flag)
 	}
 	else{
-		$(Case).remove(Flag)		
+		//$(Case).remove(Flag)		
+		document.getElementsById('colonne').children[j].children[i].children[0].classList.remove(Flag)
+
 	}
+}
 }
