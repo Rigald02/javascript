@@ -4,6 +4,7 @@ var timer;
 var difficulty = "beginner";
 var tableau = [];
 
+
 function chrono() {
 	var currentTime = Date.now();
 	var diff = (currentTime - startTime)/1000;
@@ -14,11 +15,14 @@ function chrono() {
 	var preSec = (sec < 10) ? "0" : "";
 	document.getElementById("timer").innerHTML = "Temps :  " + preMin + min + ":" + preSec + sec;
 }
+
+
 function startChrono() {
 	startTime = Date.now();
 	clearInterval(timer);
 	timer = setInterval("chrono()", 50);
 }
+
 
 function diffcultySetup(){
 	difficulty = document.getElementById("difficulty").value;
@@ -39,6 +43,7 @@ function diffcultySetup(){
 	}
 }
 
+
 function setupBoard(size){
 	for (var i = 0; i < size; i++){
 
@@ -52,6 +57,7 @@ function setupBoard(size){
 	}
 }
 
+
 function displayBoardOnConsole(){
 
 	for (var i = 0; i < tableau.length; i++){
@@ -64,16 +70,28 @@ function displayBoardOnConsole(){
 	}
 }
 
+
 function displayBoardOnPage(){
+
+	var boardDisplay = document.getElementById("tableauDemineur");
+	boardDisplay.innerHTML = "";
+
 	for (var i = 0; i < tableau.length; i++){
+
+		var line = document.createElement('tr');
+		boardDisplay.appendChild(line);
 
 		for (var j = 0; j < tableau[i].length; j++){
 
-			var boardDisplay = document.getElementById("tableauDemineur");
+			var tile = document.createElement('th');
+			var normalTile = new Image();
+			normalTile.src = './images/normal.png'
 
+			line.appendChild(normalTile);
 		}
 	}
 }
+
 
 function start() {
 	startChrono();
@@ -83,6 +101,7 @@ function start() {
 	displayBoardOnPage();
 }
 
+/*
 function  drapeau(i, j, toggle){
 	var Flag = document.getElementsById('images/flag.png');
 	if(toggle == 1){
@@ -95,4 +114,4 @@ function  drapeau(i, j, toggle){
 
 	}
 }
-}
+*/
