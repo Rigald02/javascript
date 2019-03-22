@@ -30,15 +30,19 @@ function diffcultySetup(){
 	switch (difficulty){
 		case "beginner":
 			setupBoard(9);
+			bombe(10, 9);
 			break;
 		case "medium":
 			setupBoard(16);
+			bombe(40, 16);
 			break;
 		case "expert":
 			setupBoard(22);
+			bombe(100, 22);
 			break;
 		case "master":
 			setupBoard(30);
+			bombe(250, 30)
 			break;
 	}
 }
@@ -80,10 +84,38 @@ function displayBoardOnPage(){
 	}
 }
 
-function bombe(){
-
+function bombe(number,size){
+	var mine = 0;
+	for(mine = 0; mine < number; mine++){
+		var x= Math.floor(Math.random() * size);
+		var y= Math.floor(Math.random() * size);
+		if (tableau[i][j] == "X"){
+			 tableau[i][j]="O"
+			}else{ 
+			mine--
+		}
+	}
 }
 
+function play(e){
+	play = 0
+	for (i = 0, i < mine, i++)
+	{
+		play++
+		if (tab[i] == getElementsById(bombe("O")))
+		{
+			document.getElementsById('images/bomb')
+			win = false
+		}
+		else
+		{
+			document.getElementsById('images/empty')
+		}
+
+	}
+
+
+}
 
 function start() {
 	startChrono();
@@ -118,4 +150,20 @@ function  drapeau(i, j, toggle){
 
 		console.log("\n");
 	}
+}*/
+
+/*function bombe(size){
+	document.getElementsById(diffcultySetup)
+	mines = 0;
+	for (var x = 0; x < size; x++) {
+		for (var y = 0; y < size; y++) {
+			var random = Math.floor(Math.random() * 101);
+			if (random <= conf[difficulty]) {
+				tableau[y][x] = 'M';
+					document.getElementById('tableau').children[y].children[x].children[0].classList.add('images/bomb');
+				mines++;
+			}
+		}
+	}
+
 }*/
